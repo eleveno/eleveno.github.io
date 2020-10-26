@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Flutter插件开发</title>
+      <link href="/2020/07/16/Flutter%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+      <url>/2020/07/16/Flutter%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Flutter插件开发"><a href="#Flutter插件开发" class="headerlink" title="Flutter插件开发"></a>Flutter插件开发</h1><h3 id="创建package"><a href="#创建package" class="headerlink" title="创建package"></a>创建package</h3><h4 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h4><ul><li>org 包名</li><li>template 创建类型，app：应用，module：创建一个module添加至android或ios项目，package：可分享的flutter包，plugin：插件</li><li>-a:android -i：ios</li><li>—platforms android </li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;创建android插件项目</span><br><span class="line">flutter create --org com.xdja.flutter --template&#x3D;plugin --platforms android -a kotlin -i swift bridge </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;在已有项目创建新平台的实现</span><br><span class="line">flutter create -t plugin --platforms &lt;platforms&gt; .</span><br></pre></td></tr></table></figure><h3 id="生成文档"><a href="#生成文档" class="headerlink" title="生成文档"></a>生成文档</h3><ol><li>切换至package目录</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~&#x2F;dev&#x2F;mypackage</span><br></pre></td></tr></table></figure><ol><li>告知文档工具 Flutter SDK 所在位置（请自行更改 Flutter SDK 该在的位置）</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># on macOS or Linux (适用于 macOS 或 Linux 操</span><br><span class="line">export FLUTTER_ROOT&#x3D;~&#x2F;dev&#x2F;flutter  作系统)</span><br><span class="line"># on Windows (适用于 Windows 操作系统)</span><br><span class="line">set FLUTTER_ROOT&#x3D;~&#x2F;dev&#x2F;flutter</span><br></pre></td></tr></table></figure><ol><li><p>运行 <code>dartdoc</code> 工具（已经包含到 Flutter SDK 了）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> # on macOS or Linux (适用于 macOS 或 Linux 操作系统)</span><br><span class="line">  $FLUTTER_ROOT&#x2F;bin&#x2F;cache&#x2F;dart-sdk&#x2F;bin&#x2F;dartdoc   </span><br><span class="line"># on Windows (适用于 Windows 操作系统)</span><br><span class="line">  %FLUTTER_ROOT%\bin\cache\dart-sdk\bin\dartdoc</span><br></pre></td></tr></table></figure></li></ol><h3 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flutter packages pub publish --dry-run --server&#x3D;https:&#x2F;&#x2F;pub.dartlang.org</span><br><span class="line">flutter packages pub publish --server&#x3D;https:&#x2F;&#x2F;pub.dartlang.org</span><br></pre></td></tr></table></figure><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><ol><li>命令行与官网不符</li><li>注意代理</li><li>flutter版本需要stable channel</li></ol><h3 id="开发注意事项"><a href="#开发注意事项" class="headerlink" title="开发注意事项"></a>开发注意事项</h3><ol><li>尽早做国际化</li><li>尽早按照多平台适配开发，如判断当前系统是ios还是android，使用material或cupertino风格widget，根据屏幕尺寸自动排布布局</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> flutter </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> flutter plugin </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>使用AlibabaCloudToolkit一键部署个人博客</title>
+      <link href="/2020/04/29/%E4%BD%BF%E7%94%A8AlibabaCloudToolkit%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+      <url>/2020/04/29/%E4%BD%BF%E7%94%A8AlibabaCloudToolkit%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
+      
+        <content type="html"><![CDATA[<h1 id="使用Alibaba-Cloud-Toolkit一键部署个人博客"><a href="#使用Alibaba-Cloud-Toolkit一键部署个人博客" class="headerlink" title="使用Alibaba Cloud Toolkit一键部署个人博客"></a>使用Alibaba Cloud Toolkit一键部署个人博客</h1><p>很多小伙伴，可能都会有创建一个自己的博客的想法，Hexo作为一个快速、简介且高效的博客框架，成为了很多人的首选。<br>通过以下几个简简单单的命令，我们就可以快速的在本地机器上看到成果。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br><span class="line">$ hexo init blog</span><br><span class="line">$ cd blog</span><br><span class="line">$ npm install</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><br>Hexo默认的主题比较普通，没关系，hexo官方网站上有几百个主题供你选择，总有一个适合你，我们选择一个主题安装，比如xxx，在_config.yml中配置完主题，再执行一遍<strong>hexo server</strong>，瞬间高大上啊有木有？<br><img src="http://cdn.xiaoyang.pro/blog/20200429235603-2020-04-23-23-17-02.png" alt="20200429235603-2020-04-23-23-17-02"></p><p>好了，初步的准备工作已经做完了，可是光炮在自己本地的机器上有毛用啊，别的小伙伴怎么才能看的到我写的东西啊？那么我们就需要把博客部署在某一个服务器上，聪明的小伙伴已经发现了一个我们熟悉的身影，GitHub Pages，利用GitHub Pages我们可以很方便的把hexo博客发布到GitHub上。<br>既然你已经点进来这篇文章了，我相信爱折腾的你一定不会满足于此，怎么把博客发布到自己购买的阿里云ECS上啊？我们看下官方部署文档是怎么说的<br><img src="http://cdn.xiaoyang.pro/blog/20200429235639-2020-04-23-23-28-54.png" alt="20200429235639-2020-04-23-23-28-54"><br>先不说内容，看看评论怎么说的，我尼玛，看完之后是不是感觉还是一脸懵逼？那么我们再Google一下看看别人是怎么部署的，我相信看完网上的教程，可能还是一部分人不知道该怎么做，大体的思路就是在服务器上创建一个jGit仓库，通过钩子将生成的静态网页push到服务器某个目录。<br><img src="http://cdn.xiaoyang.pro/blog/20200429235654-2020-04-23-23-29-40.png" alt="20200429235654-2020-04-23-23-29-40"></p><p>那么有没有更简单一点的方法去部署我们的博客呢？偶然想到了前段时间阿里发布的Alibaba Cloud ToolKit，看官方介绍可以一键将本地应用部署至任务服务器<br><img src="http://cdn.xiaoyang.pro/blog/20200429235845-2020-04-23-23-46-22.png" alt="20200429235845-2020-04-23-23-46-22"></p><p>是不是很🐂🍺？那么我们就试试这个神器，首先我们需要在自己的机器上有一个安装了Alibaba Cloud ToolKit插件的VS Code和一个已经安装了Nginx的阿里云ECS服务器，关于nginx的安装大同小异，我们在此不再赘述，在此仅描述怎么配置一键部署</p><h2 id="配置账户"><a href="#配置账户" class="headerlink" title="配置账户"></a>配置账户</h2><p><img src="http://cdn.xiaoyang.pro/blog/20200429235713-2020-04-23-23-59-39.png" alt="20200429235713-2020-04-23-23-59-39"><br>点击左侧的Cloud ToolKit插件按钮，进入配置界面，在左上角的ALIBABA  CLOUD VIEW 窗口右上角的小齿轮按钮进行账户配置界面。<br>登录阿里云控制台，点击头像，AccessKey管理获取AK<br><img src="http://cdn.xiaoyang.pro/blog/20200429235733-2020-04-24-00-07-40.png" alt="20200429235733-2020-04-24-00-07-40"></p><p>配置完Accounts和SSH Profile之后我们就可以在实例列表中看到我们的服务器实例了，<br><img src="http://cdn.xiaoyang.pro/blog/20200429235750-2020-04-24-00-18-15.png" alt="20200429235750-2020-04-24-00-18-15"></p><h2 id="配置一键部署"><a href="#配置一键部署" class="headerlink" title="配置一键部署"></a>配置一键部署</h2><p>点击RUN CONFIGURATIONS窗口右上角的三个小点，选择Deploy to ECS进入一键部署界面。<br><img src="http://cdn.xiaoyang.pro/blog/20200429235810-2020-04-24-00-19-10.png" alt="20200429235810-2020-04-24-00-19-10"><br>接下来我们填写部署需要的配置<br><img src="http://cdn.xiaoyang.pro/blog/20200429235824-2020-04-24-00-21-57.png" alt="20200429235824-2020-04-24-00-21-57"></p><ul><li>Name 该部署的名称，我们可以根据部署的业务取一个名称，方便后续识别</li><li>File 因为hexo是基于npm构建，这里我们选择npm build</li><li>Project：我们本地项目的根目录</li><li>Build Output：生成的静态网页目录</li><li>Scripts：这里会自动识别出Hexo的几个命令，我们的目的是每次更改源文件之后生成新的静态网页，故这里选择hexo generate</li><li>Target ECS：目标服务器实例</li><li>Target Dirctory：也就是我们将Build Output输出最终上传到阿里云服务器的哪个目录，这里可以根据自己需要选择</li><li>After deploy：部署之后执行的命令，一般是重启服务，我这里是重启nginx，当然这一步是非必须的。</li></ul><p>好了，以上就是全部配置，接下来就是见证奇迹的时刻，我们点击Ok或RUN CONFIGURATIONS窗口DEployments项中右侧的箭头，就可以在控制台看到部署在执行了，执行成功之后，我们再刷新一下页面，是不是网站内容以及改变了？ </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Blog </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Alibaba Cloud Tools </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
